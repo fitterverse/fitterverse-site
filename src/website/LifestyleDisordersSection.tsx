@@ -41,8 +41,10 @@ const LifestyleDisordersSection = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-          See How We Manage Each Condition
+        <button onClick={() => document.getElementById('our-approach')?.scrollIntoView({ behavior: 'smooth' })}
+  className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+>
+  See How We Manage Each Condition
         </button>
       </div>
     </section>

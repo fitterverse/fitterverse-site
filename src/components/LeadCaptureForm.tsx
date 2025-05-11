@@ -41,7 +41,7 @@ const LeadCaptureForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+    <form id="lead-form" onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
       <h2 className="text-2xl font-bold mb-4 text-center text-blue-700">Start Your Free Health Assessment</h2>
 
       <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required className="w-full mb-3 p-2 border rounded" />

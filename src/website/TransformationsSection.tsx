@@ -1,4 +1,3 @@
-// src/website/TransformationsSection.tsx
 import React from 'react';
 
 const transformations = [
@@ -23,6 +22,20 @@ const transformations = [
     imageBefore: 'https://via.placeholder.com/150?text=Before',
     imageAfter: 'https://via.placeholder.com/150?text=After',
   },
+  {
+    name: 'Aman',
+    issue: 'Thyroid',
+    result: 'TSH normalized without medication',
+    imageBefore: 'https://via.placeholder.com/150?text=Before',
+    imageAfter: 'https://via.placeholder.com/150?text=After',
+  },
+  {
+    name: 'Sneha',
+    issue: 'Cholesterol',
+    result: 'LDL dropped by 60 points naturally',
+    imageBefore: 'https://via.placeholder.com/150?text=Before',
+    imageAfter: 'https://via.placeholder.com/150?text=After',
+  },
 ];
 
 const TransformationsSection = () => {
@@ -33,27 +46,51 @@ const TransformationsSection = () => {
           Client Transformations
         </h2>
         <p className="mt-4 text-gray-600">
-          Real stories of real people — reversed naturally.
+          Real people. Real results. All without medication.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
-        {transformations.map((client, index) => (
-          <div key={index} className="bg-white rounded-xl shadow p-4 text-center">
-            <div className="flex justify-center gap-2 mb-4">
-              <img src={client.imageBefore} alt="Before" className="rounded-md w-1/2" />
-              <img src={client.imageAfter} alt="After" className="rounded-md w-1/2" />
+      {/* Scrollable Cards */}
+      <div className="mt-12 overflow-x-auto">
+        <div className="flex gap-6 w-max">
+          {transformations.map((client, index) => (
+            <div
+              key={index}
+              className="min-w-[280px] max-w-sm bg-white rounded-xl shadow p-4 text-center"
+            >
+              <div className="flex justify-center gap-2 mb-4">
+                <img
+                  src={client.imageBefore}
+                  alt="Before"
+                  className="rounded-md w-1/2"
+                />
+                <img
+                  src={client.imageAfter}
+                  alt="After"
+                  className="rounded-md w-1/2"
+                />
+              </div>
+              <h3 className="font-semibold text-lg text-gray-800">
+                {client.name}
+              </h3>
+              <p className="text-sm text-blue-600 font-medium">
+                {client.issue}
+              </p>
+              <p className="mt-1 text-sm text-gray-600">{client.result}</p>
             </div>
-            <h3 className="font-semibold text-lg text-gray-800">{client.name}</h3>
-            <p className="text-sm text-blue-600 font-medium">{client.issue}</p>
-            <p className="mt-1 text-sm text-gray-600">{client.result}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
+      {/* CTA Button */}
       <div className="mt-12 text-center">
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-          Your Journey Can Start Today
+        <button
+          onClick={() =>
+            document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' })
+          }
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          Start Your Transformation
         </button>
       </div>
     </section>

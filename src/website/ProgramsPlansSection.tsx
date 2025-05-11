@@ -1,4 +1,3 @@
-// src/website/ProgramsPlansSection.tsx
 import React from 'react';
 
 const plans = [
@@ -23,6 +22,15 @@ const plans = [
 ];
 
 const ProgramsPlansSection = () => {
+  const scrollToForm = () => {
+    const form = document.getElementById('lead-form');
+    if (form) {
+      form.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.warn('Lead form not found');
+    }
+  };
+
   return (
     <section className="bg-white py-16 px-6 md:px-16">
       <div className="text-center max-w-3xl mx-auto">
@@ -49,7 +57,11 @@ const ProgramsPlansSection = () => {
               ))}
             </ul>
             <div className="mt-6 text-2xl font-bold text-blue-700">{plan.price}</div>
-            <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+
+            <button
+              onClick={scrollToForm}
+              className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
               {plan.price === 'Free' ? 'Start Free' : 'Join Now'}
             </button>
           </div>
@@ -57,13 +69,17 @@ const ProgramsPlansSection = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <button className="text-blue-600 underline hover:text-blue-800 font-medium">
+        <a
+          href="https://wa.me/919112549823"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline hover:text-blue-800 font-medium"
+        >
           Talk to an Expert
-        </button>
+        </a>
       </div>
     </section>
   );
 };
 
 export default ProgramsPlansSection;
-

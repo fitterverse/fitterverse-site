@@ -11,16 +11,20 @@ const MainCTASection = () => {
         Choose your path to healing — and take action today.
       </p>
 
-      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+      <div className="mt-8 flex justify-center">
+        <a
+          href="https://wa.me/919112549823"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+        >
           Get Free Consultation
-        </button>
-        <button className="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-          Start 7-Day Trial Plan
-        </button>
+        </a>
       </div>
 
-      <p className="mt-6 text-sm italic text-blue-100">*Limited spots available each week</p>
+      <p className="mt-6 text-sm italic text-blue-100">
+        *Limited spots available each week
+      </p>
     </section>
   );
 };

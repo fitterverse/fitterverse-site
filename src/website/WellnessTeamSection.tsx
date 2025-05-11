@@ -54,9 +54,14 @@ const WellnessTeamSection = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+        <a
+          href="https://wa.me/919112549823"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition inline-block"
+        >
           Book a Free Call With Our Coach
-        </button>
+        </a>
       </div>
     </section>
   );

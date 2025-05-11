@@ -32,7 +32,7 @@ const steps = [
 
 const OurApproachSection = () => {
   return (
-    <section className="bg-blue-50 py-16 px-6 md:px-16">
+    <section id="our-approach" className="bg-blue-50 py-16 px-6 md:px-16">
       <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Our Approach: Diet + Habits + Nutrients
@@ -53,8 +53,10 @@ const OurApproachSection = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-          Get Your Personalized Plan Now
+        <button onClick={() => document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' })}
+             className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+         >
+            Get Your Personalized Plan Now
         </button>
       </div>
     </section>
