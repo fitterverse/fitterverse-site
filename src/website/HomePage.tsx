@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from './HeroSection';
+import LeadCaptureForm from '../components/LeadCaptureForm';
 import LifestyleDisordersSection from './LifestyleDisordersSection';
 import OurApproachSection from './OurApproachSection';
 import ProgramsPlansSection from './ProgramsPlansSection';
@@ -15,6 +16,12 @@ const HomePage = () => {
   return (
     <div>
       <HeroSection />
+
+      {/* 👇 Place form right below Hero */}
+      <div className="my-12 px-4">
+        <LeadCaptureForm />
+      </div>
+
       <LifestyleDisordersSection />
       <OurApproachSection />
       <ProgramsPlansSection />
